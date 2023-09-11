@@ -40,7 +40,7 @@
     position: relative;
     display: grid;
     grid-template-columns: 24% 52% 22%;
-    grid-template-rows: 71px 1fr 500px;
+    grid-template-rows: auto auto auto;
     grid-template-areas:
     "header header header "
     "sidebarLeft content  sidebarRight"
@@ -86,6 +86,7 @@ h3{
   line-height: 26px;
   color: var(--primary);
   direction: rtl;
+  font-weight: 500;
 }
 h4{
   font-family: 'Atlas Regular';
@@ -287,9 +288,7 @@ header{
 } */
 /* ===== START MAIN SECTION */
 main{
-  position: relative;
   margin-top: 2rem;
-  height: 100vh;
   z-index: 0;
 }
 .main-container{
@@ -536,7 +535,7 @@ main .main-first-card{
   text-align: center;
  }
  .panel-first-right p{
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
  }
 .h-1{
@@ -565,6 +564,8 @@ main .main-first-card{
   gap: .5rem;
   justify-content: flex-end;
   align-self: flex-end;
+  gap: .5rem;
+  margin-top: .8rem;
  }
  .panel-btn{
   display: flex;
@@ -576,6 +577,7 @@ main .main-first-card{
   padding: 1px 1rem;
   border: 1px solid var(--secondary);
   border-radius: 15px;
+  gap: .3rem;
  }
  .panel-second-content,.panel-third-content,.panel-footer{
   display: flex;
@@ -632,6 +634,11 @@ main .main-first-card{
  .panel-file-icons{
   display: flex;
   justify-content: end;
+  gap: .8rem;
+ }
+ .panel-file-icons img{
+  width: 35px;
+  height: 45px;
  }
  .main-circle-section{
   display: flex;
@@ -703,7 +710,8 @@ main .main-first-card{
 }
 .circle-card-left h3{
   font-family: 'Atlas Regular';
-  /* margin-right: 2rem; */
+  direction: ltr;
+  align-self: flex-end;
 }
 .circle-card-right{
   display: flex;
@@ -788,7 +796,7 @@ main .main-first-card{
   justify-content: center;
   align-items: center;
   align-self: end;
-  width: 150px;
+  width: 160px;
   height: 28px;
   border: none;
   outline: none;
@@ -796,6 +804,7 @@ main .main-first-card{
   color: var(--white);
   font: normal normal normal 16px/35px AtlasPro AAA;
   border-radius: 15px;
+  padding: 5px 10px;
 }
 
 /* ===== START SIDE RIGHT ===== */
@@ -860,4 +869,115 @@ main .main-first-card{
 }
 .sidebar-right-link-wrapper .sidebar-right-links:hover span{
   display: inline-block;
+}
+
+/* Footer Section */
+.footer-container{
+  width: 100%;
+  height:844px;;
+  background-image:url('../assets/images/map.jpeg') ;
+  z-index: 0;
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+}
+.footer-form-wrapper{
+  display: flex;
+  justify-content: end; 
+  width: 65%;
+  justify-content: end;
+}
+.footer-form{
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  background: var(--white);
+  padding: 1rem 1.5rem;
+  margin-top: 5rem;
+  border-radius: 15px;
+  width: 300px;
+  height: 600px;
+  align-self: center;
+}
+.footer-form .form-group{
+  display: flex;
+  flex-direction: column;
+  gap: .2rem;
+  direction: rtl;
+}
+.form-group label{
+  font-family: 'Atlas Regular';
+  font-size: 14px;
+}
+.footer-form .form-group input,textarea{
+  outline: none;
+  border: none;
+  background: var(--gallery);
+  padding: 15px 1rem;
+  width: 100%;
+  border-radius: 50px;
+}
+.form-group textarea{
+  height: 150px;
+  border-radius: 15px;
+}
+.footer-form .btn{
+  width: 100%;
+  padding: 15px 1rem;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  background: var(--secondary);
+  color: var(--white);
+}
+.footer-contact{
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+  direction: rtl;
+  width: 45%;
+  gap: 2rem;
+}
+.footer-contact div{
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  gap: .1rem;
+  margin-right: 10rem;
+}
+.footer-cell-num{
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+}
+.footer-cell-num span{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  direction: ltr;
+}
+.footer-cell-num span:nth-child(1) img{
+  width: 35px;
+  height: 35px;
+}
+.footer-contact h2,.footer-contact h3{
+ direction: rtl;
+ color: var(--white);
+}
+.footer-contact h3:nth-child(2),
+.footer-contact h3:nth-child(3),
+.footer-contact h3:nth-child(4){
+  font-family: 'Atlas Regular';
+  font-weight: 100;
+  direction: rtl;
+}
+ .footer-contact .text-green {
+  color: var(--primary);
+ }
+.footer-icons{
+  display: flex !important;
+  flex-direction: row !important;
+  gap: .2rem;
+  direction: ltr;
 }
