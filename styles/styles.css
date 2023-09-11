@@ -35,6 +35,9 @@
    width: 100%;
    height: 100vh;
    z-index: 0;
+   line-height: 1.5;
+   font-weight: 400;
+   overflow-x: hidden;
   }
   .site-container{
     position: relative;
@@ -68,7 +71,7 @@ footer {
 /* ======= End of Layout Setup ======== */
 h1{
   font-family: 'Atlas Bold';
-  font-size: 32px;
+  font-size: 36px;
   line-height: 79px;
   color: var(--deepblue);
   direction: rtl;
@@ -88,12 +91,25 @@ h3{
   direction: rtl;
   font-weight: 500;
 }
+.f-18{
+  font-size: 18px !important;
+  font-family: 'Atlas Regular' !important;
+}
+.f-23{
+  font-size: 23px !important;
+  font-family: 'Atlas Medium' !important;
+}
 h4{
   font-family: 'Atlas Regular';
   font-size: 12px;
   line-height: 26px;
   color: var(--secondary);
   direction: rtl;
+}
+.f-14{
+  font-family: 'Atlas Regular';
+  font-size: 14px !important;
+  line-height: 26px;
 }
 p{
   font-family: 'Atlas Regular';
@@ -158,7 +174,7 @@ header{
   margin-left: 47px;
  }
  .nav-brand .nav-brand-btn h3{
-  font: normal normal normal 20px/12px AtlasPro AAA;
+  font: normal normal normal 20px/12px 'Atlas Regular';
   letter-spacing: 0.26px;
   color: #FFFFFF;
   opacity: 1;
@@ -255,7 +271,8 @@ header{
   gap: 1rem;
   top: 4.5rem;
   left:0;
-  width: 24%;
+  width:25%;
+  min-width: 25%;
 }
 .sidebar-left .sidebar-left-bg{
   background-image: url('../assets/images/bg2.png');
@@ -309,6 +326,7 @@ main{
   flex-direction: column;
   /* gap: 1rem; */
   margin-right: 1rem;
+  margin-top: 4rem;
 }
 .main-content-header .hyper-links{
   display: flex;
@@ -319,7 +337,7 @@ main{
  
 }
 .main-content-header .hyper-links a{
-  font:normal normal normal 12px/26px 'Atlas Regular';
+  font:normal normal normal 14px/26px 'Atlas Regular';
   color: var(--secondary);
   direction: ltr;
 }
@@ -822,6 +840,7 @@ main .main-first-card{
    align-items: center;
    gap: 4px;
    margin-left: 5.8rem;
+   margin-top: 4rem;
 }
 .sidebar-right .sidebar-right-header h2{
   font-family: 'Atlas Regular';
@@ -850,6 +869,8 @@ main .main-first-card{
 }
 .sidebar-right-link-wrapper .sidebar-right-links.active a{
   color: var(--white) !important;
+  font-size: 22px;
+  font-weight: 400;
 }
 .sidebar-right-link-wrapper .sidebar-right-links a{
   display: inline-block;
@@ -885,7 +906,6 @@ main .main-first-card{
   display: flex;
   justify-content: end; 
   width: 65%;
-  justify-content: end;
 }
 .footer-form{
   display: flex;
@@ -965,9 +985,13 @@ main .main-first-card{
  direction: rtl;
  color: var(--white);
 }
+.footer-contact h3:nth-child(2){
+  font-family: 'Atlas Medium';
+  font-weight: 600;
+}
 .footer-contact h3:nth-child(2),
 .footer-contact h3:nth-child(3),
-.footer-contact h3:nth-child(4){
+.footer-contact h3:nth-child(4),.spacing-num{
   font-family: 'Atlas Regular';
   font-weight: 100;
   direction: rtl;
